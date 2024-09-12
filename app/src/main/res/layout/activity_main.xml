@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/surveillance_officer"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginVertical="5dp"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="5dp"
+                        android:contentDescription="@string/location_icon"
+                        android:src="@drawable/location_pin_alt_1_svgrepo_com"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/street"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city_state"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/resume_photo"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/pexels_pixabay_416160" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:text="@string/profile"
+                android:background="@color/white"
+                android:textSize="20sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:checked="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/teal_700"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:padding="20dp"
+            android:text="@string/profile_desc" />
+
+        <CheckBox
+            android:id="@+id/cbContact"
+            android:layout_marginTop="15dp"
+            android:paddingHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_information"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:checked="true"/>
+
+
+        <LinearLayout
+            android:id="@+id/viewSocials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/email_icon"
+                    android:src="@drawable/email_svgrepo_com"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/email" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/phone_icon"
+                    android:src="@drawable/phone_svgrepo_com"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/phone_number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/messenger_svgrepo_com"
+                    android:contentDescription="@string/messenger_icon"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/messenger" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/linkedin_svgrepo_com"
+                    android:contentDescription="@string/linked_in_icon"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/linkedin" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/teal_700"
+            android:background="@color/white"
+            android:text="@string/education"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:checked="true"/>
+
+        <LinearLayout
+            android:id="@+id/viewEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/college_yr_2013_2017"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/silver_creek_university"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/bachelor_of_arts_in_mass_communication"
+                android:textSize="17sp"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/high_school_year_2009_2013"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/coral_coast_high_school"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/with_honors"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbWorkExp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/teal_700"
+            android:background="@color/white"
+            android:text="@string/work_experience_information"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:checked="true"/>
+
+        <LinearLayout
+            android:id="@+id/viewWork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/durgan_llc"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textAlignment="textEnd"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/work_yr_2021_present"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/surveillance_officer"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+
+                app:dividerColor="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/koss_mosciski"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textAlignment="textEnd"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/work_yr_2018_2021"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/producer"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+
+                app:dividerColor="@color/white"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/zemlak_moore"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textAlignment="textEnd"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/work_yr_2017_2018"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/cinematographer"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbCompetency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/competency"
+            android:paddingHorizontal="10dp"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/teal_700"
+            android:background="@color/white"
+            android:checked="true"/>
+
+        <LinearLayout
+            android:id="@+id/viewCompetency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="@string/laravel"/>
+                <SeekBar
+                    android:id="@+id/seekLaravel"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:thumbTint="@color/white"
+                    android:progressTint="@color/white"
+                    android:max="10"
+                    android:progress="8"
+                    android:saveEnabled="false"
+                    android:progressBackgroundTint="@color/teal_50"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="@string/mysql"/>
+                <SeekBar
+                    android:id="@+id/seekMySQL"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:max="10"
+                    android:progress="10"
+                    android:thumbTint="@color/white"
+                    android:progressTint="@color/white"
+                    android:progressBackgroundTint="@color/teal_50"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="@string/android_development"/>
+                <SeekBar
+                    android:id="@+id/seekAndroidDev"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:max="10"
+                    android:progress="8"
+                    android:thumbTint="@color/white"
+                    android:progressTint="@color/white"
+                    android:progressBackgroundTint="@color/teal_50"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
